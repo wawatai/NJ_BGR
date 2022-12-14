@@ -1,0 +1,251 @@
+@charset "UTF-8";
+header .logIN_Area .deco .icon {
+  background: url(../img/loginICON.png) no-repeat center;
+  background-size: 100%;
+}
+
+.bg {
+  background: url(../img/bg.png) no-repeat center top;
+  background-size: 100%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+main {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+}
+html body {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+html body .bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+html header {
+  width: 100%;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+html header .logoArea {
+  width: 445px;
+  height: 445px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #7b0303;
+  border-radius: 500px;
+  position: absolute;
+  top: -265px;
+  left: -123px;
+  z-index: 1;
+}
+html header .logoArea .logo {
+  width: 133px;
+  height: 36px;
+  position: absolute;
+  top: 300px;
+  left: 190px;
+  z-index: 5;
+}
+html header .top {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html header .top .center {
+  width: 1400px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 102px;
+}
+html header .top .center .logIN_Area {
+  width: auto;
+  height: 100%;
+}
+html header .top .center .logIN_Area form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html header .top .center .logIN_Area form label {
+  margin-right: 12px;
+  position: relative;
+}
+html header .top .center .logIN_Area form label .deco {
+  width: 38px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c99f55), to(#ebc980));
+  background: linear-gradient(to bottom, #c99f55 0%, #ebc980 100%);
+  border-radius: 0 50px 50px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+html header .top .center .logIN_Area form label .deco .icon {
+  width: 19px;
+  height: 21px;
+}
+html header .top .center .logIN_Area form label .deco .icon.ac {
+  background-position-y: 0%;
+}
+html header .top .center .logIN_Area form label .deco .icon.pw {
+  background-position-y: 100%;
+}
+html header .top .center .logIN_Area form label input {
+  width: 188px;
+  height: 35px;
+  padding: 0 10px 0 46px;
+  background: #e0e0e0;
+  border-radius: 0 20px 0 0;
+  border: 1px solid #f5f5f5;
+  -webkit-box-shadow: inset 0px 0px 4px rgba(25, 25, 25, 0.2274509804), inset 0px 0px 4px rgba(25, 25, 25, 0.2274509804);
+          box-shadow: inset 0px 0px 4px rgba(25, 25, 25, 0.2274509804), inset 0px 0px 4px rgba(25, 25, 25, 0.2274509804);
+  color: #7b0303;
+  font-size: 16px;
+  font-weight: bold;
+}
+html header .top .center .logIN_Area form button {
+  width: 110px;
+  height: 35px;
+  margin-right: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+html header .top .center .logIN_Area form button > :first-child {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebc980), color-stop(20%, #c69b63), color-stop(77%, #ebc980));
+  background: linear-gradient(to bottom, #ebc980 0%, #c69b63 20%, #ebc980 77%);
+  color: #000000;
+}
+html header .bottom {
+  width: 100%;
+  height: 80px;
+  padding-left: 362px;
+}

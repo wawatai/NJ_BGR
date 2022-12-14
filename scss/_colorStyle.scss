@@ -1,0 +1,20 @@
+//header
+$logoBG: #7b0303;
+$labelDecoBG: linear-gradient(to bottom, #c99f55 0%, #ebc980 100%);
+
+@mixin headerInput {
+    background: #e0e0e0;
+    border-radius: 0 20px 0 0;
+    border: 1px solid #f5f5f5;
+    box-shadow: inset 0px 0px 4px #1919193a,
+                inset 0px 0px 4px #1919193a;
+    color: #7b0303;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@mixin mainBtn {
+    background: linear-gradient(to bottom, #ebc980 0%, #c69b63 20%, #ebc980 77%);
+    color: #000000;
+}
+
