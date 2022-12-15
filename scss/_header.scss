@@ -3,9 +3,10 @@ header {
     height: 160px;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: 999;
 
     // logo
     .logoArea {
@@ -15,7 +16,7 @@ header {
         background: $logoBG;
         border-radius: 500px;
         position: absolute;
-        top: -265px;
+        top: -271px;
         left: -123px;
         z-index: 1;
 
@@ -26,6 +27,7 @@ header {
             top: 300px;
             left: 190px;
             z-index: 5;
+            cursor: pointer;
         }
     }
 
@@ -34,18 +36,20 @@ header {
         height: 80px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        padding-left: 258px;
         
         .center {
-            width: 1400px;
+            width: 85%;
+            min-width: 760px;
+            max-width: 1400px;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: 102px;
+            padding-left: 83px;
 
             .logIN_Area {
-                width: auto;
+                width: 100%;
                 height: 100%;
 
                 form {
@@ -85,28 +89,111 @@ header {
                         }
 
                         input {
-                            width: 188px;
+                            max-width: 188px;
+                            min-width: 141px;
                             height: 35px;
                             padding: 0 10px 0 46px;
                             @include headerInput;
                         }
 
-                      
+                        .fgpw {
+                            color: $remind;
+                            font-size: 14px;
+                            text-decoration: underline;
+                            position: absolute;
+                            bottom: -25px;
+                            left: 25px;
+                            cursor: pointer;
+
+                            &::before {
+                                content:"?";
+                                width: 16px;
+                                height: 16px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50px;
+                                background: transparent;
+                                border: 1px solid $remind;
+                                position: absolute;
+                                left: -25px;
+                                top: -2px;
+                            }
+
+                            &:hover,&:active,&.active {
+                                color: $mainFont;
+
+                                &::before {
+                                    border-color: $mainFont;
+                                }
+                            }
+                        }
                     }
 
                     button {
                         width: 110px;
                         height: 35px;
+                        white-space: nowrap;
+                        padding: 0 10px;
                         margin-right: 12px;
-                        border-radius: 10px;
-                        font-size: 16px;
-                        font-weight: bold;
 
-                        &>:first-child {
-                        @include mainBtn;
+                        &.login{
+                            @include mainBtn;
+                        }
+
+                        &.signup{
+                            @include subBtn;
+                            margin-right: 0;
+                        }
                     }
+                }
+            }
+
+            .lang {
+                width: 105px;
+                height: 35px;
+                border-radius: 0 20px 0 0;
+                @include lang;
+                margin-left: 12px;
+                cursor: pointer;
+
+                p {
+                    white-space: nowrap;
+                    margin: 0 10px;
+                    span {
+                        margin-left: 30px;
+                        position: relative;
+    
+                        &::before {
+                            content: "";
+                            width: 8px;
+                            height: 2px;
+                            background: $lang_arrow;
+                            transform: rotate(50deg);
+                            position: absolute;
+                            top: 50%;
+                            left: -15px;
+                        }
+    
+                        &::after {
+                            content: "";
+                            width: 8px;
+                            height: 2px;
+                            background: $lang_arrow;
+                            transform: rotate(-50deg);
+                            position: absolute;
+                            top: 50%;
+                            left: -10px;
+                        }
                     }
-                    
+                }
+            }
+        }
+
+        @media only screen and (max-width:1120px) {
+            .center {
+                input {
+                    width: 5%;
                 }
             }
         }
@@ -115,6 +202,133 @@ header {
     .bottom {
         width: 100%;
         height: 80px;
-        padding-left: 362px;
+        display: flex;
+        align-items: center;
+        padding-left: 258px;
+
+        .center {
+            display: flex;
+            align-items: center;
+            padding-left: 83px;
+
+            li {
+                width: auto;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-left: 2px solid $border_01;
+                position: relative;
+                cursor: pointer;
+    
+                p {
+                    color: $mainFont;
+                    font-size: 20px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    margin: 0 22px;
+                    position: relative;
+                }
+
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4),
+                &:nth-of-type(5),
+                &:nth-of-type(6) {
+                    p {
+                        &::before {
+                            content: "";
+                            width: 8px;
+                            height: 5px;
+                            position: absolute;
+                            bottom: -20px;
+                            left: 48%;
+                        }
+                    }
+                }
+                &:last-child {
+                    border-right: 2px solid $border_01;
+                }
+
+                &:hover {
+                    &::after {
+                        content: "";
+                        width: 34px;
+                        height: 34px;
+                        background: $nav_ACT;
+                        border-radius: 100px;
+                        position: absolute;
+                        top: -4px;
+                        left: 8px;
+                        z-index: -1;
+                    }
+
+                    p {
+                        &::before,
+                        &::after {
+                            transform: translateY(110%);
+                            transition: ease-in-out 0.3s;
+                        }
+                    }
+                }
+
+                &:active,&.active {
+                    &::before {
+                        content: "";
+                        width: 85%;
+                        height: 99%;
+                        background: $nav_ACT;
+                        border-radius: 35px 35px 0 0;
+                        position: absolute;
+                        bottom: 0px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            @media only screen and (max-width:1788px) {
+                li {
+                    p {
+                        font-size: 19px;
+                    }
+                }
+            }
+            @media only screen and (max-width:1742px) {
+                li {
+                    p {
+                        font-size: 18.5px;
+                    }
+                }
+            }
+            @media only screen and (max-width:1713px) {
+                li {
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            @media only screen and (max-width:1692px) {
+                li {
+                    p {
+                        font-size: 17.5px;
+                    } 
+                }
+            }
+            @media only screen and (max-width:1666px) {
+                li {
+                    p {
+                        font-size: 17px;
+                    } 
+                }
+            }
+            @media only screen and (max-width:1000px) {
+                li {
+                    p {
+                        font-size: 14px;
+                        margin: 0 5px;
+                    } 
+                }
+            }
+        }
     }
 }

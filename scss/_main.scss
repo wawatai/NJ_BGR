@@ -6,7 +6,15 @@ html {
     body {
         width: auto;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
+
+        .bcenter {
+            width: 1400px;
+            height: auto;
+        }
 
         .bg {
             width: 100%;

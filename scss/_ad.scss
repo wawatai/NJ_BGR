@@ -1,0 +1,91 @@
+.ad {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 162px;
+    position: relative;
+    z-index: 5;
+
+    .mq {
+        width: 96px;
+        height: 465px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        .title {
+            width: 35px;
+            height: 145px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $mqBG;
+            border-radius: 50px;
+            position: relative;
+            z-index: 10;
+
+            &::before {
+                content: "";
+                width: 13px;
+                height: 13px;
+                background: $nav_ACT;
+                border-radius: 50px;
+                position: absolute;
+                bottom: -5px;
+            }
+
+            p {
+                color: $mqTitle;
+                font-size: 20px;
+                font-weight: bold;
+                writing-mode: vertical-lr;
+            }
+        }
+
+        .textBox {
+            width: 50px;
+            height: 415px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $textBoxBG;
+            border-radius: 30px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 7;
+
+            .inner {
+                width: 70%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                border: 1px solid $border_02;
+                border-radius: 30px;
+                overflow: hidden;
+
+                .content {
+                    color: $mqTitle;
+                    font-size: 20px;
+                    font-weight: bold;
+                    writing-mode: vertical-lr;
+                    padding-top: 20px;
+                    animation: mqText 6s linear infinite;
+
+                    @keyframes mqText {
+                        0% {
+                            transform: translateY(150%);
+                        }
+                        100% {
+                            transform: translateY(-100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
