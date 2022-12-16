@@ -716,6 +716,8 @@ html .ad .mq {
   position: absolute;
   top: 50%;
   left: 20px;
+  -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4745098039)) drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.4745098039));
+          filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4745098039)) drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.4745098039));
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10;
@@ -817,6 +819,43 @@ html .ad .mq .textBox .inner .content {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
+}
+html .ad .mq .textBox::before {
+  content: "";
+  width: 31px;
+  height: 73px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c99f55), to(#ebc980));
+  background: linear-gradient(to top, #c99f55 0%, #ebc980 100%);
+  border-radius: 50px;
+  position: absolute;
+  bottom: -22px;
+  right: -15px;
+  z-index: 7;
+}
+html .ad .mq .textBox::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c99f55), to(#ebc980));
+  background: linear-gradient(to top, #c99f55 0%, #ebc980 100%);
+  border-radius: 30px;
+  position: absolute;
+  bottom: 46px;
+  right: -27px;
+}
+html .mainWrap {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html .mainWrap .gameType {
+  width: auto;
+  max-width: 1400px;
 }
 html footer {
   width: 100%;
