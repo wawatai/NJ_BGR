@@ -5,7 +5,238 @@
     justify-content: center;
 
     .gameType {
-        width: auto;
+        width: 75%;
         max-width: 1400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            width: 100%;
+            height: 205px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid $border_03;
+
+            li {
+                width: 155px;
+                height: 138px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position-y: 0%;
+                margin-right: 18px;
+                transition: transform 0.3s;
+                cursor: pointer;
+
+                p {
+                    color: $gameType_Font;
+                    font-size: 18px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover,&:active,&.active {
+                    background-position-y: 100%;
+                    transform: translateY(-10%);
+
+                    p {
+                        color: $mainFont;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            height: auto;
+            display: flex;
+            overflow: hidden;
+            padding: 30px 0;
+
+            .typeContent {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                .gameBlock {
+                    width: 250px;
+                    height: 390px;
+                    margin: 0 15px 20px;
+                    position: relative;
+                    z-index: 10;
+                    cursor: pointer;
+
+                    &.board {
+                        .rsgbg {
+                            width: 250px;
+                            height: 390px;
+                            position: absolute;
+                            z-index: 12;
+                        }
+                    }
+                    .brandLOGO {
+                        width: 69px;
+                        height: 30px;
+                        position: absolute;
+                        top: 28px;
+                        left: 50%;
+                        background-position-y: 100%;
+                        transform: translateX(-50%);
+
+                        &.b36 {
+                            height: 25px;
+                        }
+                        &.pp {
+                            width: 73px;
+                            height: 33px;
+                            top: 24px;
+                        }
+                        &.wm {
+                            width: 34px;
+                            height: 36px;
+                            top: 24px;
+                        }
+                        &.sa {
+                            width: 72px;
+                            height: 26px;
+                            top: 33px;
+                        }
+                        &.jili {
+                            width: 57px;
+                            height: 22px;
+                            top: 33px;
+                        }
+                        &.rsg {
+                            width: 51px;
+                            height: 30px;
+                        }
+                        &.pg {
+                            width: 68px;
+                            height: 17px;
+                            top: 36px;
+                        }
+                        &.ifun {
+                            width: 83px;
+                            height: 25px;
+                        }
+                        &.png {
+                            width: 82px;
+                            height: 23px;
+                        }
+                    }
+                    .clipBG {
+                        width: 100%;
+                        height: 350px;
+                        overflow: hidden;
+
+                        .pngbg {
+                            width: 250px;
+                            height: 390px;
+                            position: absolute;
+                            z-index: 12;
+                        }
+
+                        .mainObject {
+                            width: 250px;
+                            height: 390px;
+                            position: relative;
+                            z-index: 15;
+    
+                            
+                            span {
+                                width: 250px;
+                                height: 390px;
+                                position: absolute;
+                                bottom: 20px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                z-index: 17;
+                            }
+                        }
+                    }
+                    
+                    .toplayer {
+                        width: 250px;
+                        height: 390px;
+                        position: absolute;
+                        top: 0;
+                        z-index: 20;
+                        overflow: hidden;
+
+                        p {
+                            color: $gameNAME;
+                            font-size: 17px;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            position: absolute;
+                            bottom: 15px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    &:hover,&:active,&.active {
+                        .rsgbg {
+                            animation: shake 1s ease-in infinite reverse;
+                        }
+                        .clipBG {
+                            .pngbg {
+                                animation: zoomI 1s ease-in infinite reverse;
+                            }
+    
+                            .mainObject {
+                                animation: move 1s ease-in-out 0s infinite ;
+                            
+                                span {
+                                    animation: liveD 1s ease-in-out 0s infinite ;
+                                }
+                            }
+                        }
+                    }
+                    @keyframes move {
+                        0% {
+                            transform: skew(2deg) translateY(0);
+                        }
+                        50% {
+                            transform: skew(0) translateY(3%);
+                        }
+                        100% {
+                            transform: skew(-2deg) translateY(0);
+                        }
+                    }
+                    @keyframes zoomI {
+                        0% {
+                            transform: scale(1.15);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                    @keyframes shake {
+                        0% {
+                            transform: rotate(2deg);
+                        }
+                        50% {
+                            transform: rotate(-2deg);
+                        }
+                        100% {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                s {
+                    width: 250px;
+                    margin: 0 15px;
+                }
+            }
+        }
     }
 }

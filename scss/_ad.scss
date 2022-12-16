@@ -6,7 +6,7 @@
     align-items: center;
     margin-top: 162px;
     position: relative;
-    z-index: 5;
+    z-index: 10;
 
     .mq {
         width: 96px;
@@ -16,7 +16,7 @@
         left: 20px;
         filter: drop-shadow(2px 2px 5px $mqShadaw) drop-shadow(-2px -2px 5px $mqShadaw);
         transform: translateY(-50%);
-        z-index: 10;
+        z-index: 20;
 
         .title {
             width: 35px;
