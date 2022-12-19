@@ -331,4 +331,134 @@ header {
             }
         }
     }
+
+    @media only screen and (max-width: 1412px) {
+        .bottom {
+            padding-left: 15.5%;
+
+            .center {
+                li {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1314px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1266px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1223px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1125px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1045px) {
+        .top {
+            padding-left: 22%;
+        }
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1008px) {
+        .top {
+            padding-left: 22%;
+            .center {
+                .logIN_Area {
+                    form {
+                        button {
+                            width: 98px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .logoArea {
+            left: -206px;
+            .logo {
+                left: 228px;
+            }
+        }
+        .top {
+            padding-left: 235px;
+            .center {
+                padding: 0 8px;
+                justify-content: unset;
+
+                .logIN_Area {
+                    width: 68%;
+                }
+            }
+        }
+        .bottom {
+            height: 65px;
+            padding-left: 219px;
+            .center {
+                font-size: 14px;
+                padding: 0;
+                li {
+                    p {
+                        margin: 0 6px;
+                    }
+                }
+            }
+        }
+    }
 }
