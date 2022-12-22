@@ -20,6 +20,8 @@ header {
         left: -123px;
         z-index: 1;
 
+       
+
         .logo {
             width: 133px;
             height: 36px;
@@ -28,6 +30,10 @@ header {
             left: 190px;
             z-index: 5;
             cursor: pointer;
+
+            &:hover {
+                transform: scale(1.15);
+            }
         }
     }
 

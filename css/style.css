@@ -455,6 +455,116 @@ html body .bg {
   left: 0;
   z-index: -999;
 }
+html body .bg span {
+  border-radius: 500px;
+  position: absolute;
+}
+html body .bg span.gold {
+  width: 215px;
+  height: 215px;
+  background: transparent;
+  border: 3px solid #d3ab62;
+  top: 561px;
+  left: 99px;
+  -webkit-animation: ripple 4s ease-in infinite;
+          animation: ripple 4s ease-in infinite;
+}
+html body .bg span.gold::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  display: block;
+  border-radius: 500px;
+  background: transparent;
+  border: 1px solid #d3ab62;
+  position: absolute;
+  top: -67px;
+  left: -73px;
+  -webkit-animation: ripple 4s 4s ease-in infinite;
+          animation: ripple 4s 4s ease-in infinite;
+}
+html body .bg span.gold::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  display: block;
+  border-radius: 500px;
+  background: transparent;
+  border: 1px solid #d3ab62;
+  position: absolute;
+  top: 149px;
+  left: -42px;
+  -webkit-animation: ripple 3s 2s ease-in infinite;
+          animation: ripple 3s 2s ease-in infinite;
+}
+html body .bg span.gray {
+  width: 300px;
+  height: 300px;
+  background: transparent;
+  border: 3px solid #6f6f6f;
+  top: -66px;
+  right: 269px;
+  -webkit-animation: ripple 6s ease-in infinite;
+          animation: ripple 6s ease-in infinite;
+}
+html body .bg span.gray::before {
+  content: "";
+  width: 431px;
+  height: 431px;
+  display: block;
+  border-radius: 500px;
+  background: transparent;
+  border: 1px solid #6f6f6f;
+  position: absolute;
+  top: -242px;
+  left: -254px;
+  -webkit-animation: ripple 5s 5s ease-in infinite;
+          animation: ripple 5s 5s ease-in infinite;
+}
+html body .bg span.gray::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  display: block;
+  border-radius: 500px;
+  background: transparent;
+  border: 1px solid #6f6f6f;
+  position: absolute;
+  top: 169px;
+  left: 230px;
+  -webkit-animation: ripple 4.5s 2s ease-in infinite;
+          animation: ripple 4.5s 2s ease-in infinite;
+}
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
 html header {
   width: 100%;
   height: 160px;
@@ -491,6 +601,10 @@ html header .logoArea .logo {
   left: 190px;
   z-index: 5;
   cursor: pointer;
+}
+html header .logoArea .logo:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 html header .top {
   width: 100%;
@@ -2078,7 +2192,7 @@ html footer .bcenter .bottom .partnerBlock .clogo:hover, html footer .bcenter .b
 }
 @media only screen and (max-width: 1000px) {
   html footer .bcenter .mid ul {
-    margin-right: 25px;
+    margin-right: 50px;
   }
   html footer .bcenter .mid ul .Bigtitle {
     font-size: 17px;
