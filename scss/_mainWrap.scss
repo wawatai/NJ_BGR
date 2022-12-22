@@ -6,7 +6,7 @@
     justify-content: center;
 
     .ad {
-        width: 100%;
+        width: calc(100% - 520px);
         max-width: 1400px;
         height: auto;
         display: flex;
@@ -463,16 +463,9 @@
             }
         }
     }
-    @media only screen and (max-width: 1412px) {
-        .ad {
-            width: 90%;
-        }
-    }
-
+  
     @media only screen and (max-width: 1000px) {
         .ad {
-            width: 90%;
-
             .mq {
                 display: none;
             }

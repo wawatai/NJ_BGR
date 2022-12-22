@@ -1016,7 +1016,7 @@ html header .bottom .center li:active::before, html header .bottom .center li.ac
   }
 }
 html .ad {
-  width: 100%;
+  width: calc(100% - 520px);
   max-width: 1400px;
   height: auto;
   display: -webkit-box;
@@ -1040,6 +1040,10 @@ html .ad.swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+html .ad.swiper .swiper-button-prev::before,
+html .ad.swiper .swiper-button-next::before {
+  content: " ";
 }
 html .ad .mq {
   width: 96px;
@@ -1189,7 +1193,7 @@ html .mainWrap {
           justify-content: center;
 }
 html .mainWrap .ad {
-  width: 100%;
+  width: calc(100% - 520px);
   max-width: 1400px;
   height: auto;
   display: -webkit-box;
@@ -1751,15 +1755,7 @@ html .mainWrap .gameType .bottom .typeContent s {
   width: 250px;
   margin: 0 15px;
 }
-@media only screen and (max-width: 1412px) {
-  html .mainWrap .ad {
-    width: 90%;
-  }
-}
 @media only screen and (max-width: 1000px) {
-  html .mainWrap .ad {
-    width: 90%;
-  }
   html .mainWrap .ad .mq {
     display: none;
   }
