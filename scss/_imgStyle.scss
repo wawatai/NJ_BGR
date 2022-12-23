@@ -17,6 +17,10 @@ header .bottom .center li:nth-of-type(6) p::before {
     background: url(../img/gameTypeNav.png) no-repeat center;
     background-size: 100%;
 }
+.mainWrap .top li::before {
+    background: url(../img/icon/hover_arrow.png) no-repeat center;
+    background-size: 100%;
+}
 .mainWrap .typeContent .gameBlock.sport {
     background: url(../img/entrance/sport.png) no-repeat center;
     background-size: 100%;
@@ -280,6 +284,11 @@ footer .gcLOGO {
 
 //bg 
 .bg {
-    background: url(../img/bg.png) no-repeat center top;
-    background-size: cover;
+    background: url(../img/bg.png) repeat center top;
+    background-size: 100%;
+}
+
+footer::before {
+    background: url(../img/footerBG.png) no-repeat bottom;
+    background-size: 100%;
 }

@@ -6,7 +6,7 @@
     justify-content: center;
 
     .ad {
-        width: calc(100% - 520px);
+        width: 100%;
         max-width: 1400px;
         height: auto;
         display: flex;
@@ -29,11 +29,78 @@
                     }
                 }
             }
+
+            .swiper-button-prev {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 40px 0 0 40px;
+                border-color: transparent transparent transparent $nextPrevBtn;
+                position: absolute;
+                top: unset;
+                bottom: 0px;
+                left: 0px;
+    
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 0 6px 12px;
+                    border-color: transparent transparent $nextPrev_icon transparent;
+                    position: absolute;
+                    bottom: 6px;
+                    left: -35px;
+                }
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 3px;
+                    background: $nextPrev_icon;
+                    position: absolute;
+                    bottom: 6px;
+                    left: -26px;
+                }
+            }
+    
+            .swiper-button-next {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 40px 40px;
+                border-color: transparent transparent $nextPrevBtn transparent;
+                position: absolute;
+                top: unset;
+                bottom: 0px;
+                left: unset;
+                right: 0px;
+    
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 0 0 12px;
+                    border-color: transparent transparent transparent $nextPrev_icon;
+                    position: absolute;
+                    bottom: -34px;
+                    right: 5px;
+                }
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 3px;
+                    background: $nextPrev_icon;
+                    position: absolute;
+                    bottom: -34px;
+                    right: 14px;
+                }
+            }
         }
     
         .mq {
             width: 96px;
-            height: 465px;
+            height: 90%;
             position: absolute;
             top: 50%;
             left: 20px;
@@ -67,6 +134,7 @@
                     font-size: 20px;
                     font-weight: bold;
                     writing-mode: vertical-lr;
+                    white-space: nowrap;
                 }
             }
     
@@ -97,6 +165,7 @@
                         font-size: 20px;
                         font-weight: bold;
                         writing-mode: vertical-lr;
+                        white-space: nowrap;
                         padding-top: 20px;
                         animation: mqText 6s linear infinite;
     
@@ -105,7 +174,7 @@
                                 transform: translateY(150%);
                             }
                             100% {
-                                transform: translateY(-100%);
+                                transform: translateY(-130%);
                             }
                         }
                     }
@@ -147,21 +216,24 @@
 
         .top {
             width: 100%;
-            height: 24%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 35px 0;
             border-bottom: 2px solid $border_03;
 
             li {
-                width: 155px;
-                height: 138px;
+                width: 11.072%;
+                height: 0;
+                padding-top: 9.799%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 background-position-y: 0%;
                 margin-right: 18px;
                 transition: transform 0.3s;
+                position: relative;
                 cursor: pointer;
 
                 p {
@@ -169,10 +241,25 @@
                     font-size: 18px;
                     font-weight: bold;
                     white-space: nowrap;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    &.media {
+                        display: none;
+                        text-align: center;
+                    }
                 }
 
-                &:last-child {
-                    margin-right: 0;
+                &::before {
+                    content: "";
+                    width: 10%;
+                    height: 0;
+                    padding-top: 5%;
+                    position: absolute;
+                    bottom: -53px;
+                    opacity: 0;
                 }
 
                 &:hover,&:active,&.active {
@@ -181,6 +268,10 @@
 
                     p {
                         color: $mainFont;
+                    }
+
+                    &::before {
+                        opacity: 1;
                     }
                 }
             }
@@ -258,8 +349,8 @@
                 }
 
                 .gameBlock {
-                    width: 17%;
-                    height: 53%;
+                    width: 238px;
+                    height: 434px;
                     margin: 0 15px 20px;
                     position: relative;
                     z-index: 10;
@@ -277,7 +368,7 @@
                         width: 69px;
                         height: 30px;
                         position: absolute;
-                        top: 8%;
+                        top: 58px;
                         left: 50%;
                         background-position-y: 100%;
                         transform: translateX(-50%);
@@ -288,22 +379,22 @@
                         &.pp {
                             width: 73px;
                             height: 33px;
-                            top: 24px;
+                            top: 50px;
                         }
                         &.wm {
                             width: 34px;
                             height: 36px;
-                            top: 24px;
+                            top: 53px;
                         }
                         &.sa {
                             width: 72px;
                             height: 26px;
-                            top: 33px;
+                            top: 58px;
                         }
                         &.jili {
                             width: 57px;
                             height: 22px;
-                            top: 33px;
+                            top: 61px;
                         }
                         &.rsg {
                             width: 51px;
@@ -312,7 +403,7 @@
                         &.pg {
                             width: 68px;
                             height: 17px;
-                            top: 36px;
+                            top: 64px;
                         }
                         &.ifun {
                             width: 83px;
@@ -326,8 +417,10 @@
                     
                     .clipBG {
                         width: 100%;
-                        height: 87%;
+                        height: 79%;
                         overflow: hidden;
+                        position: absolute;
+                        top: 15px;
 
                         .pngbg {
                             width: 250px;
@@ -341,7 +434,6 @@
                             height: 390px;
                             position: relative;
                             z-index: 15;
-    
                             
                             span {
                                 width: 250px;
@@ -369,7 +461,7 @@
                             font-weight: bold;
                             white-space: nowrap;
                             position: absolute;
-                            bottom: 6%;
+                            bottom: 47px;
                             left: 50%;
                             transform: translateX(-50%);
                         }
@@ -463,37 +555,34 @@
             }
         }
     }
-  
-    @media only screen and (max-width: 1000px) {
-        .ad {
-            .mq {
-                display: none;
-            }
-        }
-
+    @media only screen and (max-width: 1610px) {
         .gameType {
             .top {
-                height: 9%;
                 li {
-                    width: 166px;
-                    height: 83px;
-                    margin-right: 15px;
-
                     p {
-                        font-size: 12px;
+                        &.ori {
+                            display: none;
+                        }
+                        &.media {
+                            display: flex;
+                        }
                     }
                 }
             }
-
-            .bottom {
-                .typeContent {
-                    .gameBlock {
-                        width: 29%;
-                        height: 22%;
-
-                        .toplayer {
-                            font-size: 15px;
-                        }
+        }
+    }
+    @media only screen and (max-width: 1425px) {
+        .ad {
+            width: calc(100% - 100px);
+        }
+    }
+    @media only screen and (max-width: 1254px) {
+        .gameType {
+            .top {
+                li {
+                    p {
+                        font-size: 15px;
+                        white-space: pre;
                     }
                 }
             }
