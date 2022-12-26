@@ -17,42 +17,43 @@ header .bottom .center li:nth-of-type(6) p::before {
   background-size: 100%;
 }
 
-.mainWrap .top li::before {
+.mainWrap .lideco,
+.mainWrap .fakedeco {
   background: url(../img/icon/hover_arrow.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.sport {
+.mainWrap .gameBlock.sport {
   background: url(../img/entrance/sport.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.b36 {
+.mainWrap .gameBlock .mainObject.b36 {
   background: url(../img/entrance/sport_b36.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .toplayer.sport {
+.mainWrap .gameBlock .toplayer.sport {
   background: url(../img/entrance/sport_top.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.live {
+.mainWrap .gameBlock.live {
   background: url(../img/entrance/live.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.pp {
+.mainWrap .gameBlock .mainObject.pp {
   background: url(../img/entrance/live_pp.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.wm {
+.mainWrap .gameBlock .mainObject.wm {
   background: url(../img/entrance/live_wm.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.sa {
+.mainWrap .gameBlock .mainObject.sa {
   background: url(../img/entrance/live_sa.png) no-repeat center;
   background-size: 100%;
 }
@@ -62,82 +63,82 @@ header .bottom .center li:nth-of-type(6) p::before {
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .toplayer.live {
+.mainWrap .gameBlock .toplayer.live {
   background: url(../img/entrance/live_top.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.fish {
+.mainWrap .gameBlock.fish {
   background: url(../img/entrance/fish.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.jili {
+.mainWrap .gameBlock .mainObject.jili {
   background: url(../img/entrance/fish_jili.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .toplayer.fish {
+.mainWrap .gameBlock .toplayer.fish {
   background: url(../img/entrance/fish_top.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.board {
+.mainWrap .gameBlock.board {
   background: url(../img/entrance/board.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.rela {
+.mainWrap .gameBlock .mainObject.rela {
   background: url(../img/entrance/board_rela.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.rsg {
+.mainWrap .gameBlock .mainObject.rsg {
   background: url(../img/entrance/board_rsg.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.board .rsgbg {
+.mainWrap .gameBlock.board .rsgbg {
   background: url(../img/entrance/board_rsg_deco.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.pg {
+.mainWrap .gameBlock .mainObject.pg {
   background: url(../img/entrance/board_pg.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .toplayer.board {
+.mainWrap .gameBlock .toplayer.board {
   background: url(../img/entrance/board_top.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.slot {
+.mainWrap .gameBlock.slot {
   background: url(../img/entrance/slot.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.ifun {
+.mainWrap .gameBlock .mainObject.ifun {
   background: url(../img/entrance/slot_ifun.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.ifun span {
+.mainWrap .gameBlock .mainObject.ifun span {
   background: url(../img/entrance/slot_ifun_deco.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .mainObject.png {
+.mainWrap .gameBlock .mainObject.png {
   background: url(../img/entrance/slot_png.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock.slot .pngbg {
+.mainWrap .gameBlock.slot .pngbg {
   background: url(../img/entrance/slot_png_deco.png) no-repeat center;
   background-size: 100%;
 }
 
-.mainWrap .typeContent .gameBlock .toplayer.slot {
+.mainWrap .gameBlock .toplayer.slot {
   background: url(../img/entrance/slot_top.png) no-repeat center;
   background-size: 100%;
 }
@@ -1291,7 +1292,7 @@ html .mainWrap .gameType .top {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 35px 0;
-  border-bottom: 2px solid #ffffff;
+  z-index: 10;
 }
 html .mainWrap .gameType .top li {
   width: 11.072%;
@@ -1330,25 +1331,65 @@ html .mainWrap .gameType .top li p.media {
   display: none;
   text-align: center;
 }
-html .mainWrap .gameType .top li::before {
-  content: "";
-  width: 10%;
+html .mainWrap .gameType .top li .lideco {
+  width: 7.9%;
   height: 0;
-  padding-top: 5%;
+  padding-top: 10%;
   position: absolute;
-  bottom: -53px;
+  bottom: -12px;
+  left: 50%;
+  top: 150px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   opacity: 0;
 }
-html .mainWrap .gameType .top li:hover, html .mainWrap .gameType .top li:active, html .mainWrap .gameType .top li.active {
+html .mainWrap .gameType .top li:hover {
   background-position-y: 100%;
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
 }
-html .mainWrap .gameType .top li:hover p, html .mainWrap .gameType .top li:active p, html .mainWrap .gameType .top li.active p {
+html .mainWrap .gameType .top li:hover p {
   color: #ffffff;
 }
-html .mainWrap .gameType .top li:hover::before, html .mainWrap .gameType .top li:active::before, html .mainWrap .gameType .top li.active::before {
+html .mainWrap .gameType .top li:active, html .mainWrap .gameType .top li.active {
+  background-position-y: 100%;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+html .mainWrap .gameType .top li:active p, html .mainWrap .gameType .top li.active p {
+  color: #ffffff;
+}
+html .mainWrap .gameType .top li:active .lideco, html .mainWrap .gameType .top li.active .lideco {
   opacity: 1;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+html .mainWrap .gameType .midLine {
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  position: relative;
+}
+html .mainWrap .gameType .midLine .fakedeco {
+  width: 0.9%;
+  height: 0;
+  padding-top: 0.99%;
+  position: absolute;
+  top: -12px;
+  left: 337px;
+}
+html .mainWrap .gameType .midLine .lideco {
+  width: 0.9%;
+  height: 0;
+  padding-top: 0%;
+  position: absolute;
+  top: -12px;
+  left: 337px;
+  -webkit-transform: translateY(1%);
+          transform: translateY(1%);
+  -webkit-transition: 0.05s ease-in;
+  transition: 0.05s ease-in;
+  opacity: 0;
 }
 html .mainWrap .gameType .bottom {
   width: 100%;
@@ -1702,6 +1743,285 @@ html .mainWrap .gameType .bottom .typeContent s {
   width: 250px;
   margin: 0 15px;
 }
+html .mainWrap .gameType .gtswiper {
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding: 4% 0;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.hot {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.hot.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.all {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.all.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.sport {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.sport.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.live {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.live.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.fish {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.fish.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.slot {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.slot.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.board {
+  display: none;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide.board.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock {
+  width: 180px;
+  height: 290px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock.board .rsgbg {
+  width: 250px;
+  height: 390px;
+  position: absolute;
+  z-index: 12;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO {
+  width: 69px;
+  height: 30px;
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  background-position-y: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.b36 {
+  height: 25px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.pp {
+  width: 73px;
+  height: 33px;
+  top: 16px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.wm {
+  width: 34px;
+  height: 36px;
+  top: 20px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.sa {
+  width: 72px;
+  height: 26px;
+  top: 27px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.jili {
+  width: 57px;
+  height: 22px;
+  top: 27px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.rela {
+  top: 21px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.rsg {
+  width: 51px;
+  height: 30px;
+  top: 20px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.pg {
+  width: 68px;
+  height: 17px;
+  top: 30px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.ifun {
+  width: 69px;
+  height: 20px;
+  top: 26px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .brandLOGO.png {
+  width: 60px;
+  height: 17px;
+  top: 27px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .clipBG {
+  width: 100%;
+  height: 79%;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .clipBG .pngbg {
+  width: 250px;
+  height: 390px;
+  position: absolute;
+  z-index: 12;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .clipBG .mainObject {
+  width: 100%;
+  height: 390px;
+  position: relative;
+  z-index: 15;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .clipBG .mainObject span {
+  width: 250px;
+  height: 390px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 17;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .toplayer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  overflow: hidden;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .toplayer p {
+  color: #ffea96;
+  font-size: 17px;
+  font-weight: bold;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:hover .rsgbg, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:active .rsgbg, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock.active .rsgbg {
+  animation: shake 1s ease-in infinite reverse;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:hover .clipBG .pngbg, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:active .clipBG .pngbg, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock.active .clipBG .pngbg {
+  animation: zoomI 1s ease-in infinite reverse;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:hover .clipBG .mainObject, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:active .clipBG .mainObject, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock.active .clipBG .mainObject {
+  -webkit-animation: move 1.3s ease-in-out 0s infinite;
+          animation: move 1.3s ease-in-out 0s infinite;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:hover .clipBG .mainObject span, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:active .clipBG .mainObject span, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock.active .clipBG .mainObject span {
+  -webkit-animation: liveD 1.6s ease-in-out 0s infinite;
+          animation: liveD 1.6s ease-in-out 0s infinite;
+}
+html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:hover.slot .mainObject span, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:active.slot .mainObject span, html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock.active.slot .mainObject span {
+  -webkit-animation: ifunD 1.6s ease-in-out 0s infinite;
+          animation: ifunD 1.6s ease-in-out 0s infinite;
+}
+@keyframes move {
+  0% {
+    -webkit-transform: skew(2deg) translateY(0);
+            transform: skew(2deg) translateY(0);
+  }
+  25% {
+    -webkit-transform: skew(0) translateY(3%);
+            transform: skew(0) translateY(3%);
+  }
+  75% {
+    -webkit-transform: skew(-2deg) translateY(0);
+            transform: skew(-2deg) translateY(0);
+  }
+  100% {
+    -webkit-transform: skew(0deg) translateY(0);
+            transform: skew(0deg) translateY(0);
+  }
+}
+@keyframes zoomI {
+  0% {
+    -webkit-transform: scale(1.11);
+            transform: scale(1.11);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes liveD {
+  0% {
+    -webkit-transform: rotateZ(-20deg) translate(-50%, 0%);
+            transform: rotateZ(-20deg) translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: rotateZ(-10deg) translate(-90%, 0%);
+            transform: rotateZ(-10deg) translate(-90%, 0%);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg) translate(-50%, 0%);
+            transform: rotateZ(0deg) translate(-50%, 0%);
+  }
+}
+@keyframes ifunD {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate(-50%, 0%);
+            transform: rotateZ(0deg) translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: rotateZ(-10deg) translate(-50%, 0%);
+            transform: rotateZ(-10deg) translate(-50%, 0%);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg) translate(-50%, 0%);
+            transform: rotateZ(0deg) translate(-50%, 0%);
+  }
+}
 @media only screen and (max-width: 1610px) {
   html .mainWrap .gameType .top li p.ori {
     display: none;
@@ -1721,6 +2041,11 @@ html .mainWrap .gameType .bottom .typeContent s {
   html .mainWrap .gameType .top li p {
     font-size: 15px;
     white-space: pre;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  html .mainWrap .gameType .bottom {
+    display: none;
   }
 }
 html footer {
