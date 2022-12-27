@@ -2047,6 +2047,13 @@ html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock:hove
   html .mainWrap .gameType .bottom {
     display: none;
   }
+  html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .clipBG .mainObject {
+    height: 280px;
+  }
+  html .mainWrap .gameType .gtswiper .swiper-wrapper .swiper-slide .gameBlock .toplayer p {
+    font-size: 12px;
+    bottom: 14px;
+  }
 }
 html footer {
   width: 100%;

@@ -917,6 +917,27 @@
             .bottom {
                 display: none;
             }
+
+            .gtswiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .gameBlock {
+                            .clipBG {
+                                .mainObject {
+                                    height: 280px;
+                                }
+                            }
+
+                            .toplayer {
+                                p {
+                                    font-size: 12px;
+                                    bottom: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
