@@ -123,6 +123,14 @@ html {
                     }
                 }
             }
+
+            i {
+                width: 10px;
+                height: 10px;
+                border: 3px solid $circle_gray;
+                pointer-events: none;
+                user-select: none;
+            }
         }
     }
 

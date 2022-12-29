@@ -578,6 +578,16 @@ html body .bg span.gray::after {
     opacity: 0;
   }
 }
+html body .bg i {
+  width: 10px;
+  height: 10px;
+  border: 3px solid #6f6f6f;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 html header {
   width: 100%;
   height: 160px;

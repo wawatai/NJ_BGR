@@ -203,7 +203,7 @@ $(function(){
     })
 
 })
-
+//箭頭動畫
 $(function(){
     var w = $(window).innerWidth();
     var midX = $(".gameType .midLine").offset().top;
@@ -317,3 +317,12 @@ $(function(){
     })
 })
 
+//mouse Trial
+$(function(){
+    $("html").mousemove(function(mE){
+        var mX = mE.pageX - $("html").offset().left;
+        var mY = mE.pageY - $("html").offset().top;
+        
+        $("bg").append("<i></i>");
+    })
+})
