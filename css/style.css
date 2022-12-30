@@ -461,6 +461,7 @@ html body .bcenter {
 html body .bg {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -579,14 +580,85 @@ html body .bg span.gray::after {
   }
 }
 html body .bg i {
-  width: 10px;
-  height: 10px;
-  border: 3px solid #6f6f6f;
+  width: 60px;
+  height: 60px;
+  border: 0.1px solid #6f6f6f;
+  border-radius: 50px;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  position: absolute;
+  -webkit-animation: rFade 2s linear;
+          animation: rFade 2s linear;
+  opacity: 0;
+}
+@-webkit-keyframes rFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(300%);
+            transform: translate(-50%, -50%) scale(300%);
+  }
+}
+@keyframes rFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(300%);
+            transform: translate(-50%, -50%) scale(300%);
+  }
+}
+html body .bg freeze {
+  width: 60px;
+  height: 60px;
+  border: 0.1px solid #d3ab62;
+  border-radius: 50px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  -webkit-animation: rFade 2s linear;
+          animation: rFade 2s linear;
+  opacity: 0;
+}
+@keyframes rFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(300%);
+            transform: translate(-50%, -50%) scale(300%);
+  }
 }
 html header {
   width: 100%;

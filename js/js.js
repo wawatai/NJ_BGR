@@ -319,10 +319,38 @@ $(function(){
 
 //mouse Trial
 $(function(){
+    var timer = null;
+    var handle = null;
+
     $("html").mousemove(function(mE){
         var mX = mE.pageX - $("html").offset().left;
         var mY = mE.pageY - $("html").offset().top;
-        
-        $("bg").append("<i></i>");
+
+        clearInterval(handle);
+        handle = setInterval(function(){
+            $(".bg")
+            .append("<freeze style='top: "+ mY +"px; left: "+ mX +"px;'></freeze>");
+
+            if($(".bg freeze").length >= 5)
+            {
+                $(".bg freeze").first()
+                .remove();
+            }
+        },700)
+
+        if(timer != null) return;
+
+        timer = setTimeout(function(){
+            timer = null;
+        },220);
+
+        $(".bg")
+        .append("<i style='top: "+ mY +"px; left: "+ mX +"px;'></i>");
+
+        if($(".bg i").length >= 10)
+        {
+            $(".bg i").first()
+            .remove();
+        }
     })
 })
